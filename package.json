@@ -1,0 +1,49 @@
+{
+  "name": "glad-stream-decoder",
+  "version": "1.0.0",
+  "description": "Transform stream to decode GLAD forest alerts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "documentation readme index.js --section=API"
+  },
+  "keywords": [
+    "glad",
+    "forest",
+    "png",
+    "stream"
+  ],
+  "author": "Gregor MacLennan / Digital Democracy",
+  "license": "MIT",
+  "dependencies": {
+    "color-string": "^1.5.2",
+    "inherits": "^2.0.3",
+    "julian": "^0.2.0",
+    "object-assign": "^4.1.1",
+    "readable-stream": "^2.3.6"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "canvas": "^1.6.10",
+    "dev-null": "^0.1.1",
+    "documentation": "^6.3.2",
+    "from2-buffer": "^1.0.0",
+    "logger": "0.0.1",
+    "png-stream": "^1.0.5",
+    "tap": "^11.1.4",
+    "tape": "^4.9.0",
+    "through2": "^2.0.3",
+    "true-color-tiles": "github:gfw-api/true-color-tiles"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digidem/glad-stream-decoder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digidem/glad-stream-decoder/issues"
+  },
+  "homepage": "https://github.com/digidem/glad-stream-decoder#readme"
+}
