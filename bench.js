@@ -19,6 +19,7 @@ suite.add('decoder', function (deferred) {
     .pipe(new PNGDecoder())
     .pipe(new DecodeGLADStream())
     .pipe(new PNGEncoder())
+    .resume()
     .on('finish', function () {
       deferred.resolve()
     })
@@ -28,13 +29,10 @@ suite.add('no decode', function (deferred) {
   fromBuffer(raw)
     .pipe(new PNGDecoder())
     .pipe(new PNGEncoder())
-    .pipe(through2(
-      function (chunk, enc, cb) { cb(null, chunk) },
-      function flush (cb) {
-        deferred.resolve()
-        cb()
-      }
-    )).pipe(devnull())
+    .resume()
+    .on('finish', function () {
+      deferred.resolve()
+    })
 }, {defer: true})
 
 suite.add('ImageService', function () {
